@@ -19,7 +19,7 @@ public class PassWord {
 		/**
 		 * public method used by the MenuUI to check the password with the one in the file
 		 * */
-		System.out.print("\nEnter the password: ");
+		System.out.print("\n Enter the password: ");
 		String pass = input.next();
 		checkUntilPasswordIsCorrect(pass);
 		//the checkUntilPasswordIsCorrect() method checks the password until it is correct and the else condition need not be checked

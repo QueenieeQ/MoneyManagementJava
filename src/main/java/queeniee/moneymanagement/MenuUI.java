@@ -13,13 +13,12 @@ import java.util.Scanner;
 public class MenuUI {
 
 	public static void main(String[] args) throws IOException {
-		          System.out.println("Enter the password:");
+		//System.out.println("Enter the password:");
+                //Testing commit to github
 		Scanner input = new Scanner(System.in);
 		int ch;
 		char userChoice = 'N';
 		PassWord pass = new PassWord();
-		
-		
 		if(pass.checkPassWord() == true	){
 			do{
 				System.out.print("\n Options available are: \n1. Make an Entry \n2. Get the expenses done for a particular date \n3. Get the log for a particular month \n4. Check Expense done for a particular month  \n5. Set budget \n6. Delete a particular month's log \n7. Change Password \nEnter Your Choice");
