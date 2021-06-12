@@ -21,7 +21,8 @@ public class MenuUI {
 		PassWord pass = new PassWord();
 		if(pass.checkPassWord() == true	){
 			do{
-				System.out.print("\n Options available are: \n1. Make an Entry \n2. Get the expenses done for a particular date \n3. Get the log for a particular month \n4. Check Expense done for a particular month  \n5. Set budget \n6. Delete a particular month's log \n7. Change Password \nEnter Your Choice");
+                                showMenu();
+				//System.out.print("\n Options available are: \n1. Make an Entry \n2. Get the expenses done for a particular date \n3. Get the log for a particular month \n4. Check Expense done for a particular month  \n5. Set budget \n6. Delete a particular month's log \n7. Change Password \n Enter your choice: ");
 				//System.out.print("Enter Your Choice");
                                 ch = input.nextInt();
 				Manager manage = new Manager();
@@ -55,7 +56,7 @@ public class MenuUI {
 					//Change password
 					pass.changePassWord();
 				}
-				System.out.print("\nAnything Else?(y/n): ");
+				System.out.println("\nAnything Else?(y/n): ");
 				userChoice  = input.next().charAt(0);
 				}while(userChoice == 'y' || userChoice == 'Y' );
 		}
@@ -63,5 +64,17 @@ public class MenuUI {
 			System.out.print("The entered password is incorrect! ");
 		input.close();
 	}
-
+public static void showMenu() {
+        System.out.println("-----------menu------------");
+        System.out.println("1. Make an Entry");
+        System.out.println("2. Get the expenses done for a particular date.");
+        System.out.println("3. Get the log for a particular month.");
+        System.out.println("4. Check Expense done for a particular month.");
+        System.out.println("5. Set budget");
+        System.out.println("6. Delete a particular month's log");
+        System.out.println("7. Change Password");
+        System.out.println("0. exit.");
+        System.out.println("---------------------------");
+        System.out.println("Please choose: ");
+    }
 }

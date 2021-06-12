@@ -30,12 +30,12 @@ public class Manager {
 		 * calls the enterLog, to make an entry in the Log Book
 		 */
 		Log log = new Log();
-		System.out.print("\nEnter the Date (dd/mm/yyyy): ");
+		System.out.println("\nEnter the Date (dd/mm/yyyy): ");
 		log.setDate(input.next());
-		System.out.print("\nEnter the item: ");
+		System.out.println("\nEnter the item: ");
 		input.nextLine();
 		log.setItem(input.nextLine());
-		System.out.print("\nEnter Cost: Rs");
+		System.out.println("\nEnter Cost: VND");
 		log.setCost(input.nextInt());
 		enterLog(log);
 	}
@@ -53,7 +53,7 @@ public class Manager {
 		// get the budget set for the month from the "Budget.txt" file
 		if(budgetBookData == null){
 			System.out.print("\nThe budget has not been set yet, please set the budget: ");
-			System.out.print("\nThe budget for the month is Rs. ");
+			System.out.print("\nThe budget for the month is VND. ");
 			budget = input.nextInt();
 			file.updateLogBook(budget, 0, log.getDate(), "nil", 0);
 		}
@@ -124,7 +124,7 @@ public class Manager {
 			 * Warns the user that setting budget would set the expense to zero
 			 */
 			if(pass.checkPassWord()){
-			System.out.print("\nResetting the budget may create error in the calculations\nDo you still want to continue? (y/n): ");
+			System.out.println("\nResetting the budget may create error in the calculations\nDo you still want to continue? (y/n): ");
 			char ch = input.next().charAt(0);
 			if(ch == 'y' || ch == 'Y'){
 				// if the condition is true, the budget is taken from the user, and updated in the "Budget.txt"
