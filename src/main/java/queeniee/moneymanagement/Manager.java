@@ -36,7 +36,8 @@ public class Manager {
 		input.nextLine();
 		log.setItem(input.nextLine());
 		System.out.println("\nEnter Cost: VND");
-		log.setCost(input.nextInt());
+		//log.setCost(input.nextInt());
+                log.setCost((int) input.nextFloat());
 		enterLog(log);
 	}
 	
