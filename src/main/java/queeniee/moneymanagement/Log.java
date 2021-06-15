@@ -32,9 +32,10 @@ public class Log {
 		return item;
 	}
 	
-	public int getCost() {
-		return cost;
-	}
+        public int getCost() {
+            return cost;
+        }
+        
 
 	
 	
